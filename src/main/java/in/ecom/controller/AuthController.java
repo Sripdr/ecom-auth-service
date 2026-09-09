@@ -24,7 +24,7 @@ public class AuthController {
     @PostMapping("/register/admin")
     public ResponseEntity<String> registerAdmin(@RequestBody AuthUserRequest userRequest) {
         authenticationService.registerAdmin(userRequest);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Admin Registered Successfully for the " + userRequest.getEmail().toUpperCase());
+        return ResponseEntity.status(HttpStatus.CREATED).body("Admin User Registered Successfully for the " + userRequest.getEmail().toUpperCase());
     }
 
     @PostMapping("/register/user")
